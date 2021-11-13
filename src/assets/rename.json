@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "imgUrl": "images/fruit-og-d176ef00.jpg",
+      "itemName": "Fruits",
+      "price" : "Rs. 50",
+      "prevprice" : "Rs100",
+      "netWt" : "5KG"
+    },
+    {
+      "id": 2,
+      "imgUrl": "images/fruit-og-d176ef00.jpg",
+      "itemName": "Fruits",
+      "price" : "Rs.50",
+      "prevprice" : "Rs100",
+      "netWt" : "5KG"
+    },
+    
+    {
+      "id": 3,
+      "imgUrl": "images/fruit-og-d176ef00.jpg",
+      "itemName": "Fruits",
+      "price" : "Rs.50",
+      "prevprice" : "Rs100",
+      "netWt" : "5KG"
+    },
+    {
+      "id": 4,
+      "imgUrl": "images/fruit-og-d176ef00.jpg",
+      "itemName": "Fruits",
+      "price" : "Rs.50",
+      "prevprice" : "Rs100",
+      "netWt" : "5KG"
+    },
+    {
+      "id": 5,
+      "imgUrl": "images/fruit-og-d176ef00.jpg",
+      "itemName": "Fruits",
+      "price" : "Rs.50",
+      "prevprice" : "Rs100",
+      "netWt" : "5KG"
+    }
+  ]
+  

@@ -1,0 +1,29 @@
+[
+  {
+      "id" : 1,
+    "heading": "BUY 1",
+    "offers": "GET 1 FREE",
+    "number": "On 200+ Products",
+    "shopButton": "shop now"
+  },{
+      "id" : 2,
+    "heading": "BUY 1",
+    "offers": "GET 1 FREE",
+    "number": "On 200+ Products",
+    "shopButton": "shop now"
+  },
+  {
+      "id" : 3,
+    "heading": "BUY 1",
+    "offers": "GET 1 FREE",
+    "number": "On 200+ Products",
+    "shopButton": "shop now"
+  },
+  {
+      "id" : 4,
+    "heading": "BUY 1",
+    "offers": "GET 1 FREE",
+    "number": "On 200+ Products",
+    "shopButton": "shop now"
+  }
+]

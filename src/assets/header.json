@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "images/fruit-og-d176ef00.jpg",
+    "itemName": "Fruits"
+  },
+  {
+    "id": 2,
+    "imgUrl": "images/fruit-og-d176ef00.jpg",
+    "itemName": "Fruits"
+  },
+
+  {
+    "id": 3,
+    "imgUrl": "images/fruit-og-d176ef00.jpg",
+    "itemName": "Fruits"
+  },
+  {
+    "id": 4,
+    "imgUrl": "images/fruit-og-d176ef00.jpg",
+    "itemName": "Fruits"
+  },
+  {
+    "id": 5,
+    "imgUrl": "images/fruit-og-d176ef00.jpg",
+    "itemName": "Fruits"
+  }
+]
