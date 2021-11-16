@@ -1,7 +1,7 @@
 import { useHistory } from "react-router";
 import { MainContainer } from "./components/blockbuster/styles";
 
-const ParticularItem = ({ product, category }) => {
+const ParticularItem = () => {
   const history = useHistory();
 
   const item = history.location.state;

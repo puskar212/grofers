@@ -1,22 +1,21 @@
-import React from "react";
 import ItemsList from "./Items";
 import { AppConsumer } from "../../provider/AppProvider";
 
 import { UnorderedListSide, ListItemsSide } from "./styles";
 
-const SideNavbar = ({ product, category }) => {
+const SideNavbar = () => {
   return (
     <AppConsumer>
       {(context) => {
         return (
           <UnorderedListSide>
-            {category.map((e) => {
+            {context.categories.map((e) => {
               return (
                 <>
                   <ListItemsSide onClick={() => context.handleActive(e._id)}>
                     {e.title}
                   </ListItemsSide>
-                  {e._id === context.active && <ItemsList product={product} />}
+                  {e._id === context.active && <ItemsList context={context} />}
                 </>
               );
             })}

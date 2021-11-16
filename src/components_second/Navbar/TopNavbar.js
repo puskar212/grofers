@@ -1,13 +1,20 @@
-import React from "react";
 import { UnorderedList,ListItems } from "./styles";
+import { AppConsumer } from "../../provider/AppProvider";
 
-const TopNavbar = ({ product, category }) => {
+
+const TopNavbar = () => {
   return (
+    <AppConsumer>
+      {(context) => {
+        return (
     <UnorderedList>
-      {category.map((e) => {
+      {context.categories.map((e) => {
         return <ListItems>{e.title}</ListItems>;
       })}
     </UnorderedList>
+    );
+  }}
+</AppConsumer>
   );
 };
 

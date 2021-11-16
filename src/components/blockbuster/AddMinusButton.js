@@ -42,7 +42,7 @@ const AddMinusButton = ({ e, context }) => {
                 -
               </ButtonMinus>
               {context.cart.map((cartEle) => {
-                return <Input type="text" placeholder={cartEle.Item} />;
+                return <Input type="text" placeholder={cartEle.count} />;
               })}
               <ButtonPlus onClick={(ele) => handleAdd(ele, e._id)}>
                 +

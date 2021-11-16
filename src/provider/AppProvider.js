@@ -22,55 +22,34 @@ export class AppProvider extends Component {
 
         if (index < 0) {
           let obj = this.state.products.find((e) => e._id === id);
-          // if (obj.inventory > 0) {
-          //   let arr2 = [...obj]
-          //   let { unitStartPoint } = arr2.reduce(
-          //     (av, cv) => {
-          //       let { unitVariation } = cv;
-          //       av.unitStartPoint += unitVariation;
-          //       return av
-          //     },
-          //     { unitStartPoint: obj.unitStartPoint }
-          //   );
-          //   return{
-          //     ...obj,unitStartPoint
-          //   }
-          // }
           if (obj.inventory > 0) {
             let c = [
               ...this.state.cart,
               {
                 ...obj,
-                count: 1,
-                Item: obj.unitStartPoint,
-                inventory: obj.inventory - obj.unitStartPoint,
+                count: obj.unitStartPoint,
+                inventory: obj.inventory - obj.count,
               },
             ];
-
             return this.setState({ cart: c });
           }
-          // let c = [...this.state.cart, { ...obj, count: 1,totalItem }];
-          // this.setState({ cart: c });
         } else {
           let arr = [...this.state.cart];
           let obj = arr[index];
-          arr.splice(index, 1);
+          let arr2 =arr.slice(index)
           if (obj.inventory > 0) {
             let c = [
-              ...arr,
+              ...arr2,
               {
                 ...obj,
-                count: obj.count + 1,
-                Item: obj.Item + obj.unitVariation,
-                inventory: obj.inventory - obj.unitVariation,
+                count: obj.count + obj.unitVariation,
+                inventory: obj.inventory - obj.count,
               },
             ];
-            return this.setState({ cart: c });
+            let x = [...arr,...c]
+            return this.setState({ cart: x });
           }
         }
-        //   let c = [...arr, { ...obj, count: obj.count + 1 }];
-        //   this.setState({ cart: c });
-        // }
       },
 
       removeCart: (id) => {
@@ -90,6 +69,9 @@ export class AppProvider extends Component {
       },
     };
   }
+
+       
+
 
   componentDidMount() {
     (async () => {

@@ -28,6 +28,8 @@ const Blockbuster = () => {
                 {(context) => (
                   <Slider {...settings}>
                     {context.products.map((e) => {
+                    console.log(context)
+
                       return (
                         <>
                           {!context.cart.some((ele) => ele._id === e._id) ? (

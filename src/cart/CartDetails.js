@@ -1,7 +1,6 @@
 import React from "react";
 import Items from "./Items";
 import { Scrollbars } from "react-custom-scrollbars-2";
-import { AppConsumer } from "../provider/AppProvider";
 
 const CartDetails = ({ item }) => {
   return (
