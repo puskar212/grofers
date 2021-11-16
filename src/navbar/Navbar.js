@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 
-const Navbar1 = () => {
+const Navbar = () => {
   const history = useHistory();
 
   return (
@@ -38,4 +38,4 @@ const Navbar1 = () => {
     </nav>
   );
 };
-export default Navbar1;
+export default Navbar;

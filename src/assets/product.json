@@ -1,154 +1,148 @@
 [
-    {
-        "rating": 3.84,
-        "images": [
-            "https://i.imgur.com/EKEHQS4.jpg"
-        ],
-        "_id": "5fc5c6a86403c91e3adf2607",
-        "productName": "Onion",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 64,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 1,
-        "inventory": 20,
-        "discount": 2,
-        "popularity": 88,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Vegetables",
-        "__v": 0
-    },
-    {
-        "rating": 3.34,
-        "images": [
-            "https://5.imimg.com/data5/YT/DA/MY-45482957/small-onion-500x500.jpg",
-            "https://i.imgur.com/EKEHQS4.jpg"
-        ],
-        "_id": "5fc5c7eb6403c91e3adf2608",
-        "productName": "Small Onion",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 48,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 2,
-        "inventory": 30,
-        "popularity": 88,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Vegetables",
-        "__v": 0
-    },
-    {
-        "rating": 4.22,
-        "images": [
-            "https://5.imimg.com/data5/YY/EN/MY-8155364/fresh-apple-500x500.jpg"
-        ],
-        "_id": "5fc5c8d36403c91e3adf2609",
-        "productName": "Apple",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 120,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 1,
-        "inventory": 22,
-        "discount": 10,
-        "popularity": 68,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Fruits",
-        "__v": 0
-    },
-    {
-        "rating": 4.53,
-        "images": [
-            "https://i.imgur.com/JIS7BGL.jpg"
-        ],
-        "_id": "5fc66110b007ef258c9fd341",
-        "productName": "Pachabale Banana",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 30,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 2,
-        "inventory": 22,
-        "popularity": 82,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Fruits",
-        "__v": 0
-    },
-    {
-        "rating": 4.32,
-        "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2020/9/HX/YZ/HN/50068616/fresh-yelakki-banana-500x500.jpg",
-            "https://i.imgur.com/JIS7BGL.jpg"
-        ],
-        "_id": "5fc66259b007ef258c9fd342",
-        "productName": "Yellki Banana",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 60,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 2,
-        "inventory": 12,
-        "popularity": 56,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Fruits",
-        "__v": 0
-    },
-    {
-        "rating": 3.22,
-        "images": [
-            "https://i.imgur.com/afyVSkn.png",
-            "https://5.imimg.com/data5/SELLER/Default/2020/9/HX/YZ/HN/50068616/fresh-yelakki-banana-500x500.jpg",
-            "https://i.imgur.com/JIS7BGL.jpg"
-        ],
-        "_id": "5fc66335b007ef258c9fd343",
-        "productName": "Raw Banana",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 40,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 1,
-        "inventory": 30,
-        "discount": 5,
-        "popularity": 76,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Fruits",
-        "__v": 0
-    },
-    {
-        "rating": 4.12,
-        "images": [
-            "https://i.imgur.com/28CTpd8.png"
-        ],
-        "_id": "5fc8691573d73f00049a6af6",
-        "productName": "Coconut",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 30,
-        "unitType": "pcs(400 - 800gm)",
-        "unitVariation": 1,
-        "unitStartPoint": 1,
-        "inventory": 20,
-        "popularity": 66,
-        "category": "Vegetables & Fruits",
-        "type": "Fresh Fruits",
-        "__v": 0
-    },
-    {
-        "rating": 4.02,
-        "images": [
-            "data:image/jpeg;base64,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"
-        ],
-        "_id": "5fe760c67a6c0e000472d0e1",
-        "productName": "Dates",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        "unitPrice": 80,
-        "unitType": "kg",
-        "unitVariation": 1,
-        "unitStartPoint": 1,
-        "inventory": 20,
-        "discount": 0,
-        "popularity": 86,
-        "category": "Vegetables & Fruits",
-        "type": "Dry Fruits",
-        "__v": 0
-    }
+  {
+    "rating": 3.84,
+    "images": ["https://i.imgur.com/EKEHQS4.jpg"],
+    "_id": "5fc5c6a86403c91e3adf2607",
+    "productName": "Onion",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 64,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 1,
+    "inventory": 20,
+    "discount": 2,
+    "popularity": 88,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Vegetables",
+    "__v": 0
+  },
+  {
+    "rating": 3.34,
+    "images": [
+      "https://5.imimg.com/data5/YT/DA/MY-45482957/small-onion-500x500.jpg",
+      "https://i.imgur.com/EKEHQS4.jpg"
+    ],
+    "_id": "5fc5c7eb6403c91e3adf2608",
+    "productName": "Small Onion",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 48,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 2,
+    "inventory": 30,
+    "popularity": 88,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Vegetables",
+    "__v": 0
+  },
+  {
+    "rating": 4.22,
+    "images": [
+      "https://5.imimg.com/data5/YY/EN/MY-8155364/fresh-apple-500x500.jpg"
+    ],
+    "_id": "5fc5c8d36403c91e3adf2609",
+    "productName": "Apple",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 120,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 1,
+    "inventory": 22,
+    "discount": 10,
+    "popularity": 68,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Fruits",
+    "__v": 0
+  },
+  {
+    "rating": 4.53,
+    "images": ["https://i.imgur.com/JIS7BGL.jpg"],
+    "_id": "5fc66110b007ef258c9fd341",
+    "productName": "Pachabale Banana",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 30,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 2,
+    "inventory": 22,
+    "popularity": 82,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Fruits",
+    "__v": 0
+  },
+  {
+    "rating": 4.32,
+    "images": [
+      "https://5.imimg.com/data5/SELLER/Default/2020/9/HX/YZ/HN/50068616/fresh-yelakki-banana-500x500.jpg",
+      "https://i.imgur.com/JIS7BGL.jpg"
+    ],
+    "_id": "5fc66259b007ef258c9fd342",
+    "productName": "Yellki Banana",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 60,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 2,
+    "inventory": 12,
+    "popularity": 56,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Fruits",
+    "__v": 0
+  },
+  {
+    "rating": 3.22,
+    "images": [
+      "https://i.imgur.com/afyVSkn.png",
+      "https://5.imimg.com/data5/SELLER/Default/2020/9/HX/YZ/HN/50068616/fresh-yelakki-banana-500x500.jpg",
+      "https://i.imgur.com/JIS7BGL.jpg"
+    ],
+    "_id": "5fc66335b007ef258c9fd343",
+    "productName": "Raw Banana",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 40,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 1,
+    "inventory": 30,
+    "discount": 5,
+    "popularity": 76,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Fruits",
+    "__v": 0
+  },
+  {
+    "rating": 4.12,
+    "images": ["https://i.imgur.com/28CTpd8.png"],
+    "_id": "5fc8691573d73f00049a6af6",
+    "productName": "Coconut",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 30,
+    "unitType": "pcs(400 - 800gm)",
+    "unitVariation": 1,
+    "unitStartPoint": 1,
+    "inventory": 20,
+    "popularity": 66,
+    "category": "Vegetables & Fruits",
+    "type": "Fresh Fruits",
+    "__v": 0
+  },
+  {
+    "rating": 4.02,
+    "images": [
+      "data:image/jpeg;base64,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"
+    ],
+    "_id": "5fe760c67a6c0e000472d0e1",
+    "productName": "Dates",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    "unitPrice": 80,
+    "unitType": "kg",
+    "unitVariation": 1,
+    "unitStartPoint": 1,
+    "inventory": 20,
+    "discount": 0,
+    "popularity": 86,
+    "category": "Vegetables & Fruits",
+    "type": "Dry Fruits",
+    "__v": 0
+  }
 ]

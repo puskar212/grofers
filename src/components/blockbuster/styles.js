@@ -71,10 +71,9 @@ export const Button = styled.button`
   border-radius: 5px;
 `;
 export const ParaDiv = styled.div`
-  margin-top: 20px;
 `;
 export const Para1 = styled.p`
-  margin: 0;
+  margin-top: 20px;
   font-weight: bold;
 `;
 export const Para2 = styled(Para1)`

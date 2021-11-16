@@ -34,16 +34,16 @@ const reducer = (state, action) => {
   }
 
   if (action.type === "itemtotal") {
-    let { totalItem ,totalAmount } = state.productInfo.reduce(
+    let { totalItem, totalAmount } = state.productInfo.reduce(
       (av, cv) => {
-        let  { unitVariation ,unitPrice } = cv;
+        let { unitVariation, unitPrice } = cv;
         av.totalItem += unitVariation;
-        av.totalAmount += unitVariation * unitPrice 
-        return av
+        av.totalAmount += unitVariation * unitPrice;
+        return av;
       },
-      { totalItem: 0 , totalAmount : 0}
+      { totalItem: 0, totalAmount: 0 }
     );
-    return {...state,totalItem,totalAmount}
+    return { ...state, totalItem, totalAmount };
   }
 
   return state;

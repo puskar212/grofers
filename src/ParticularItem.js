@@ -1,5 +1,3 @@
-import React from "react";
-import SecondPage from "./components/blockbuster/SecondPage";
 import { useHistory } from "react-router";
 import { MainContainer } from "./components/blockbuster/styles";
 

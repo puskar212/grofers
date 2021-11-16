@@ -10,7 +10,7 @@ export class AppProvider extends Component {
       categories: [],
       products: [],
       cart: [],
-      minusButton: false,
+      totalItem: 0,
 
       handleActive: (val) => {
         this.setState({ active: val });
@@ -21,16 +21,56 @@ export class AppProvider extends Component {
         console.log(index);
 
         if (index < 0) {
-          const obj = this.state.products.find((e) => e._id === id);
-          let c = [...this.state.cart, { ...obj, count: 1 }];
-          this.setState({ cart: c, minusButton: true });
+          let obj = this.state.products.find((e) => e._id === id);
+          // if (obj.inventory > 0) {
+          //   let arr2 = [...obj]
+          //   let { unitStartPoint } = arr2.reduce(
+          //     (av, cv) => {
+          //       let { unitVariation } = cv;
+          //       av.unitStartPoint += unitVariation;
+          //       return av
+          //     },
+          //     { unitStartPoint: obj.unitStartPoint }
+          //   );
+          //   return{
+          //     ...obj,unitStartPoint
+          //   }
+          // }
+          if (obj.inventory > 0) {
+            let c = [
+              ...this.state.cart,
+              {
+                ...obj,
+                count: 1,
+                Item: obj.unitStartPoint,
+                inventory: obj.inventory - obj.unitStartPoint,
+              },
+            ];
+
+            return this.setState({ cart: c });
+          }
+          // let c = [...this.state.cart, { ...obj, count: 1,totalItem }];
+          // this.setState({ cart: c });
         } else {
           let arr = [...this.state.cart];
           let obj = arr[index];
           arr.splice(index, 1);
-          let c = [...arr, { ...obj, count: obj.count + 1 }];
-          this.setState({ cart: c, minusButton: true });
+          if (obj.inventory > 0) {
+            let c = [
+              ...arr,
+              {
+                ...obj,
+                count: obj.count + 1,
+                Item: obj.Item + obj.unitVariation,
+                inventory: obj.inventory - obj.unitVariation,
+              },
+            ];
+            return this.setState({ cart: c });
+          }
         }
+        //   let c = [...arr, { ...obj, count: obj.count + 1 }];
+        //   this.setState({ cart: c });
+        // }
       },
 
       removeCart: (id) => {
@@ -45,12 +85,9 @@ export class AppProvider extends Component {
         } else {
           let arr = [...this.state.cart];
           arr.splice(index, 1);
-          this.setState({ cart: arr, minusButton: false });
+          this.setState({ cart: arr });
         }
       },
-      // handleButton: (id) => {
-      //   this.setState({ minusButton: true });
-      // },
     };
   }
 

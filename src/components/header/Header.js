@@ -1,36 +1,32 @@
-import React from "react";
 import Slider from "react-slick";
 import { useHistory } from "react-router-dom";
 
+import { AppConsumer } from "../../provider/AppProvider";
 import { Wrapper, Image } from "./styles.js";
 
-const Header = ({ category, setCategory }) => {
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 4,
+};
 
+const Header = () => {
   const history = useHistory();
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-  };
   return (
-    <div >
-      <Slider {...settings}>
-        {category.map((e) => {
-          return (
-            <Wrapper state={true} onClick={() => {history.push("/itemsection")} }>
-              <div>
-                <Image src={e.image} alt="image" />
-              </div>
-              <div>
-                <p>{e.title}</p>
-              </div>
+    <AppConsumer>
+      {(context) => (
+        <Slider {...settings}>
+          {context.categories.map((e) => (
+            <Wrapper onClick={() => history.push("/itemsection")}>
+              <Image src={e.image} alt="image" />
+              <p>{e.title}</p>
             </Wrapper>
-          );
-        })}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      )}
+    </AppConsumer>
   );
 };
 
