@@ -9,7 +9,7 @@ const Cart = () => {
         return (
           <>
             {context.cart.map((e) => {
-              return <CartDetails item={e} key={e._id} />;
+              return <CartDetails item={e} key={e._id} context={context}/>;
             })}
           </>
         );

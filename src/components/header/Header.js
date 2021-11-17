@@ -16,16 +16,19 @@ const Header = () => {
 
   return (
     <AppConsumer>
-      {(context) => (
-        <Slider {...settings}>
-          {context.categories.map((e) => (
-            <Wrapper onClick={() => history.push("/itemsection")}>
-              <Image src={e.image} alt="image" />
-              <p>{e.title}</p>
-            </Wrapper>
-          ))}
-        </Slider>
-      )}
+      {(context) => {
+        console.log(context);
+        return (
+          <Slider {...settings}>
+            {context.categories.map((e) => (
+              <Wrapper onClick={() => history.push("/itemsection")}>
+                <Image src={e.image} alt="image" />
+                <p>{e.title}</p>
+              </Wrapper>
+            ))}
+          </Slider>
+        );
+      }}
     </AppConsumer>
   );
 };

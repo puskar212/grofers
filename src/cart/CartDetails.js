@@ -2,12 +2,17 @@ import React from "react";
 import Items from "./Items";
 import { Scrollbars } from "react-custom-scrollbars-2";
 
-const CartDetails = ({ item }) => {
+const CartDetails = ({ item , context}) => {
+
+const handleCart = () => {
+context.closeCart()
+}
+
   return (
     <div>
       <div>
         <h3>My Cart</h3>
-        <button>X</button>
+        <button onClick = {() => handleCart()}>X</button>
       </div>
       <div>
         <div>

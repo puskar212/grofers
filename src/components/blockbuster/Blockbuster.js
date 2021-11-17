@@ -28,7 +28,6 @@ const Blockbuster = () => {
                 {(context) => (
                   <Slider {...settings}>
                     {context.products.map((e) => {
-                    console.log(context)
 
                       return (
                         <>

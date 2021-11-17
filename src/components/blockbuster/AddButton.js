@@ -17,9 +17,14 @@ const AddButton = ({ e, context }) => {
   const history = useHistory();
 
   const handleAdd = (e, id) => {
+    console.log("B ADDD ,............");
     e.stopPropagation();
     context.addCart(id);
   };
+  
+  const AddTotal = (e,id) => {
+    context.Amount(id)
+  }
 
   return (
     <ProductItems
@@ -30,7 +35,7 @@ const AddButton = ({ e, context }) => {
           {e.discount && <Discount>{e.discount}% OFF</Discount>}
 
           <ButtonContainer>
-            <Button onClick={(ele) => handleAdd(ele, e._id)}>+</Button>
+            <Button onClick={(ele) => {handleAdd(ele, e._id);AddTotal(ele,e._id);}}>+</Button>
           </ButtonContainer>
         </Images>
       </ImagesContainer>

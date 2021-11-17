@@ -1,10 +1,17 @@
 import React from "react";
 import { useHistory } from "react-router";
+import { AppConsumer } from "../provider/AppProvider";
+import NavbarCart from "./NavbarCart"
+
 
 const Navbar = () => {
   const history = useHistory();
 
+  
+
   return (
+    <AppConsumer>
+      {(context) => (
     <nav className="navbar">
       <h1 onClick={() => history.push("/")}>grofers </h1>
       <div>
@@ -25,17 +32,13 @@ const Navbar = () => {
           <i className="fas fa-chevron-down"></i>
         </div>
       </div>
-      <div>
-        <i
-          className="fas fa-shopping-cart"
-          onClick={() => history.push("./cart")}
-        ></i>
-        <p>0</p>
-      </div>
+      <NavbarCart context={context} />
       <div>
         <p>amount</p>
       </div>
     </nav>
+      )}
+    </AppConsumer>
   );
 };
 export default Navbar;

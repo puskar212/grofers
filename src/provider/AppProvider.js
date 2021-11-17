@@ -10,44 +10,41 @@ export class AppProvider extends Component {
       categories: [],
       products: [],
       cart: [],
-      totalItem: 0,
+      open: false,
+      totalAmount: 0,
 
       handleActive: (val) => {
         this.setState({ active: val });
       },
       addCart: (id) => {
         let index = this.state.cart.findIndex((e) => e._id === id);
-
-        console.log(index);
-
+        let arr=[...this.state.cart]
+        console.log(arr);
         if (index < 0) {
           let obj = this.state.products.find((e) => e._id === id);
-          if (obj.inventory > 0) {
-            let c = [
-              ...this.state.cart,
-              {
-                ...obj,
-                count: obj.unitStartPoint,
-                inventory: obj.inventory - obj.count,
-              },
-            ];
-            return this.setState({ cart: c });
+          const { inventory, unitStartPoint } = obj;
+          if (inventory >= unitStartPoint) {
+            console.log("IFF ..........");
+            let c = [...this.state.cart, { ...obj, count: unitStartPoint }];
+            let totalAmount = this.state.cart.reduce((av, cv) => {
+              console.log(av);
+              let singletotal = cv.unitPrice * cv.count;
+              av = singletotal + av;
+              return av;
+            }, 0);
+            return this.setState({ cart: c , totalAmount});
           }
         } else {
-          let arr = [...this.state.cart];
-          let obj = arr[index];
-          let arr2 =arr.slice(index)
-          if (obj.inventory > 0) {
-            let c = [
-              ...arr2,
-              {
-                ...obj,
-                count: obj.count + obj.unitVariation,
-                inventory: obj.inventory - obj.count,
-              },
+          let obj = this.state.cart[index];
+          const { inventory, count, unitVariation } = obj;
+
+          if (inventory - count >= unitVariation) {
+            let cart = [
+              ...this.state.cart.slice(0, index),
+              { ...obj, count: count + unitVariation },
+              ...this.state.cart.slice(index + 1),
             ];
-            let x = [...arr,...c]
-            return this.setState({ cart: x });
+            return this.setState({ cart });
           }
         }
       },
@@ -55,23 +52,47 @@ export class AppProvider extends Component {
       removeCart: (id) => {
         let index = this.state.cart.findIndex((e) => e._id === id);
         const obj = this.state.cart.find((e) => e._id === id);
-        console.log(obj, index);
-        if (obj.count > 1) {
-          let arr = [...this.state.cart];
-          arr.splice(index, 1);
-          let c = [...arr, { ...obj, count: obj.count - 1 }];
-          this.setState({ cart: c });
-        } else {
+        const { inventory, count, unitVariation, unitStartPoint } = obj;
+
+        // console.log(obj, index);
+        if (count === unitStartPoint) {
+          console.log("...........else");
           let arr = [...this.state.cart];
           arr.splice(index, 1);
           this.setState({ cart: arr });
+        } else {
+          console.log("..........if");
+          let cart = [
+            ...this.state.cart.slice(0, index),
+            { ...obj, count: count - unitVariation },
+            ...this.state.cart.slice(index + 1),
+          ];
+          return this.setState({ cart });
         }
+      },
+      openCart: () => {
+        console.log("..........cart");
+        this.setState({ open: true });
+      },
+      closeCart: () => {
+        console.log("..........cart");
+        this.setState({ open: false });
+      },
+      Amount: (id) => {
+        // let obj = ;
+        // let arr = [obj];
+        let obj = this.state.products.find((e) => e._id === id);
+        let initialvalue = obj.unitPrice * obj.unitStartPoint
+        let totalAmount = this.state.cart.reduce((av, cv) => {
+          console.log(av);
+         return av + cv.unitPrice * cv.count;
+          
+         
+        }, initialvalue);
+        this.setState({ totalAmount });
       },
     };
   }
-
-       
-
 
   componentDidMount() {
     (async () => {

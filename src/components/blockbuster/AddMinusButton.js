@@ -20,14 +20,20 @@ const AddMinusButton = ({ e, context }) => {
   const history = useHistory();
 
   const handleAdd = (e, id) => {
+    console.log("ADDD");
     e.stopPropagation();
     context.addCart(id);
   };
 
   const removeCart = (e, id) => {
+    console.log("REMOVE");
     e.stopPropagation();
     context.removeCart(id);
   };
+  const AddTotal = (e,id) => {
+    context.Amount(id)
+  }
+
 
   return (
     <ProductItems
@@ -38,13 +44,12 @@ const AddMinusButton = ({ e, context }) => {
           {e.discount && <Discount>{e.discount}% OFF</Discount>}
           <ButtonContainer>
             <PlusMinusButton>
-              <ButtonMinus onClick={(ele) => removeCart(ele, e._id)}>
+              <ButtonMinus onClick={(ele) => {removeCart(ele, e._id);AddTotal(ele,e._id);}}>
                 -
               </ButtonMinus>
-              {context.cart.map((cartEle) => {
-                return <Input type="text" placeholder={cartEle.count} />;
-              })}
-              <ButtonPlus onClick={(ele) => handleAdd(ele, e._id)}>
+              <div>{context.cart.find((e1) => e1._id === e._id).count}</div>
+
+              <ButtonPlus onClick={(ele) => {handleAdd(ele, e._id);AddTotal(ele,e._id);}}>
                 +
               </ButtonPlus>
             </PlusMinusButton>

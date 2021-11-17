@@ -1,0 +1,17 @@
+.black {
+  background-color: rgba(0, 0, 0, 0.61);
+  height: 100vh;
+  width: calc(100vw - 250px);
+}
+.abc {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+}
+.cart1 {
+  max-height: 100vh;
+  overflow-y: scroll;
+  width: 250px;
+}
